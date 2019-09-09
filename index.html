@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html ng-app="myApp" ng-controller="myController">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>My Yes Place</title>
+        <link rel="icon" type="image/png" href="favicon.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png" />
+		<script src="js/angular.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/mymarkers.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+        <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js">
+        </script>
+    </head>
+    <body bgcolor="#2D2D2D">
+    <div class="page">
+
+    	<h1 class="title"> MY YES PLACE</h1>
+        
+        <div my-map=""></div>
+        
+        <div class="myresearch">
+            <input placeholder="Enter a keyword" ng-model="search">
+                <div ng-show="search.length">
+                <ul class="list" ng-repeat="marker in markers | filter: search as filtered"> 
+                    <li>
+                    <span ng-click="centerMapOnMarker(marker)">
+                    <img class="icon-search" ng-src="{{marker.icon}}" /> 
+                    <label class="textr"> {{marker.title}} <label class="quartier">à {{marker.quartier}}</label> </label> 
+                    </span>
+                    <!-- <img class="resto-img" ng-src="{{marker.img}}"/> -->
+                    </li>
+                </ul>
+                    <p class="noresto" ng-hide="filtered.length"> No restaurant found</p>
+                </div>
+        </div>
+        
+    </div>  
+    </body>
+</html>

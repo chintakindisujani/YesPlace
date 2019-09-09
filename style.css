@@ -1,0 +1,125 @@
+#gmaps {
+    width: 38em;
+    height: 38em;
+    display: inline-block;
+    border-radius: 20px;
+    margin-top: -10px;
+    margin-left: 4em;
+}
+.myresearch{
+    display: inline-block;
+    position: absolute;
+    margin-left: 4em;
+    color: white;
+    font-weight: 400;
+    width: 300px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.myresearch .icon-search{
+    padding-bottom: -5px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    margin-left: -20px;
+}
+/*.resto-img{
+    display: inline-block;
+    margin-left: auto;
+    padding-left: 200px;
+    width: 38px;
+    height: 38px;
+}*/
+.noresto{
+    font-style: italic;
+    text-align: center;
+}
+.myresearch ::-webkit-input-placeholder{
+    font-family: 'Roboto Condensed', sans-serif;
+    color: black;
+    text-align: center;
+    opacity:  0.9;
+    font-size: 13px;
+}
+.myresearch input{
+    border-color: black;
+    border-radius: 10px;
+    width: 250px;
+    height: 18px;
+}
+.textr{
+    display: inline-block;
+    position: absolute;
+/*    width: 190px;*/
+    padding-top: 6px;
+    padding-left: 2px;
+    color: white;
+}
+.gm-style .gm-style-iw {
+	font-weight: 400;
+	font-family: "Ubuntu";
+    src: url(https://fonts.googleapis.com/css?family=Ubuntu) format("truetype");
+    color: black;
+}
+
+.title{
+	font-weight: 400;
+    color: white;
+	text-align: center;
+	font-family: "Lemon/Milk";
+    src: url(font/LemonMilk.otf) format("truetype");
+}
+.quartier{
+    font-weight: 100;
+    color: grey;
+    font-style: italic;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* Mobile browsers only */
+@media only screen and (max-device-width: 480px) {
+    .title{
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    }
+    .gm-style .gm-style-iw {
+    font-weight: 400;
+    font-family: 'Ubuntu', sans-serif;
+    }
+    .myresearch{
+    display: inline)block;
+    position: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-weight: 400;
+    width: 22.5em;;
+    font-family: 'Roboto Condensed', sans-serif;
+    }
+    .myresearch input{
+    margin-top: 10px;
+    display: block;
+    margin-left: 1em;
+    margin-right: auto;
+    }
+    li{
+    margin-left: -20px;
+    height: 35px;
+    }
+    .myresearch .icon-search{
+    padding-bottom: -5px;
+    height: 40px;
+}
+    #gmaps {
+    width: 22.5em;
+    height: 14em;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto
+    }
+}
